@@ -1,4 +1,6 @@
-﻿using BlazorApp.Server.Interfaces;
+﻿#nullable disable
+
+using BlazorApp.Server.Interfaces;
 using BlazorApp.Server.Models;
 using BlazorApp.Shared.Models;
 using Microsoft.EntityFrameworkCore;
@@ -60,7 +62,7 @@ namespace BlazorApp.Server.Services
         {
             try
             {
-                User? user = _dbContext.Users.Find(id);
+                User user = _dbContext.Users.Find(id);
 
                 if (user != null)
                 {
@@ -82,7 +84,7 @@ namespace BlazorApp.Server.Services
         {
             try
             {
-                User? user = _dbContext.Users.Find(id);
+                User user = _dbContext.Users.Find(id);
 
                 if (user != null)
                 {

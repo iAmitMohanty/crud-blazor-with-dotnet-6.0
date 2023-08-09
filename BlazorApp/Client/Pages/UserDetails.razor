@@ -68,6 +68,8 @@ else
 }
 
 @code {
+    #nullable disable 
+
     protected List<User> userList = new();
     protected List<User> searchUserData = new();
     protected User user = new();
@@ -108,5 +110,4 @@ else
         SearchString = string.Empty;
         userList = searchUserData;
     }
-    
 }
